@@ -1,0 +1,42 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.admin-img{
+    border-radius:50%;
+    height:150px;
+    width:150px;
+}
+.add-projects{
+    width:5.8rem;
+    height:1.8rem;
+    outline:none;
+    border:none;
+}
+.project-card{
+   
+    background-color:white;
+    margin:3px;
+    border-radius:3px;
+    height:280px;
+
+}

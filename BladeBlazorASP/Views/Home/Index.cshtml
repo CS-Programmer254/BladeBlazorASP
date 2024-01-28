@@ -1,0 +1,60 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model SendEmail
+
+<div class=" container-sm p-0"> 
+    <div class="row flex-sm-row justify-content-sm-end p-1">
+        <a asp-controller="Projects" asp-action="AddNewProject">
+            <button class="add-projects btn-sm btn-dark text-light p-1">Add Project</button>
+        </a>
+       
+    </div>
+
+</div>
+
+<div class="container d-flex flex-column align-items-center justify-content-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Admin</p>
+    <div class="admin-img bg-dark text-light d-flex align-items-center justify-content-center">
+        Stanley Oduor
+    </div>
+
+</div>
+<form method="post" enctype="multipart/form-data" asp-action="SendEmail">
+    <div class="mt-4">
+        <div class="row pb-2">
+            <h2 class="text-dark">Add News Letters</h2>
+            <hr />
+        </div>
+
+        <div class="row mb-3 p-1">
+            <label asp-for="ToEmail" class="p-0"></label>
+            <input asp-for="ToEmail" class="form-control" />
+
+        </div>
+        <div class="row mb-3 p-1">
+            <label asp-for="Subject" class="p-0"></label>
+            <input asp-for="Subject" class="form-control" />
+
+        </div>
+        <div class="row mb-3 p-1">
+            <label asp-for="EmailMessageBody" class="p-0"></label>
+            <textarea asp-for="EmailMessageBody" class="form-control" rows="5" cols="20"></textarea>
+
+        </div>
+        <div class="row mb-3 p-1">
+            <label asp-for="EmailAttachmentUrl" class="p-0"></label>
+            <input asp-for="EmailAttachmentUrl" type="file" name="AttachedFile" class="form-control" />
+
+        </div>
+        <div class="row">
+            <div class="col-6 col-md-3">
+                <button type="submit" class="btn btn-dark form-control">Send Email</button>
+
+            </div>
+           
+        </div>
+
+    </div>
+</form>

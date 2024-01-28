@@ -1,0 +1,37 @@
+﻿@model EmailSubscribers
+
+
+<div class="row"><div class="col-6"><h1>Upcoming Projects</h1></div></div>
+<hr/>
+<partial name="_Notification"/>
+<div class="container bg-dark text-light p-1">
+    <div class="row project-section d-sm-flex flex-sm-row flex-sm-wrap align-items-center justify-content-evenly">
+        <div class="col-sm-5 my-3 project-card"><img 
+            src="\wwwroot\images\projects\70c8ef93-a157-4a5c-8613-ffbd2c619408.png"/></div>
+    </div>
+    <div>
+        <form method="post">
+          <div class="p-5 my-4 rounded-3 p-5 bg-light text-dark">
+              <div class="row pb-2 flex-sm-column align-items-center justify-content-center">
+                  
+                  <div class="col-6"> <h3>Subscribe to Our News Letters</h3></div>
+                  <div class="col-6"><hr/></div>          
+              </div>
+              <div class="row pb-2 flex-sm-row align-items-center justify-content-center">
+
+                    <div class="col-sm-6 flex-row justify-content-center">
+                        <div class="row">
+                            <input type="email" asp-for="EmailAddress" class="input-box form-control-sm w-75 text-opacity-75 p-2" placeholder="Enter Your Email Address" />
+                            <button type="submit" class="btn-sm btn-dark text-light form-control-sm w-25 p-1 mb-0 border-0 btn-outline-success">Subscribe Now</button>
+                        </div>
+                       
+                    </div>
+
+               </div>
+          
+          </div>
+
+        </form>
+    </div>
+    
+</div>

@@ -1,0 +1,36 @@
+﻿@model Project
+<form method="post" enctype="multipart/form-data">
+    <div class="mt-4">
+        <div class="row pb-2">
+            <h2 class="text-dark">Add New Project</h2>
+            <hr/>
+        </div>
+        <div class="row mb-3 p-1"> 
+            <label asp-for="ProjectName" class="p-0"></label>
+            <input asp-for="ProjectName" class="form-control" />
+
+        </div>
+        <div class="row mb-3 p-1"> 
+            <label asp-for="ProjectDescription" class="p-0"></label>
+            <input asp-for="ProjectDescription" class="form-control" />
+
+        </div>
+        <div class="row mb-3 p-1"> 
+            <label asp-for="ProjectImg" class="p-0"></label>
+            <input type="file" name="file" class="form-control"/>
+
+        </div>
+        <div class="row">
+            <div class="col-6 col-md-3">
+                <button type="submit" class="btn btn-dark form-control">Add</button>
+
+            </div>
+            <div class="col-6 col-md-3">
+                <a asp-controller="Projects" asp-action="Index" class="btn btn-outline-dark border form-control">View Projects </a>
+
+            </div>
+
+        </div>
+
+    </div>
+</form>

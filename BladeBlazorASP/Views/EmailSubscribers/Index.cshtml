@@ -1,0 +1,28 @@
+﻿@model List<EmailSubscribers>
+<h1>Email Subscribers</h1>
+<table class="table table-bordered table-striped">
+<thead>
+        <tr>
+
+            <th>Email Addresses</th>
+            <th>Subscribed</th>
+
+        </tr>
+
+</thead>
+
+  <tbody>
+        @foreach(var emailDomain in Model)
+        {
+            <tr>
+
+                <td>@emailDomain.EmailAddress</td>
+                <td>@emailDomain.IsSubscriber</td>
+
+            </tr>
+        }
+
+  </tbody>
+
+
+</table>
